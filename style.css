@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    overflow-x: hidden;
+    background-color: rgb(223, 223, 223);
+    font-family: 'Neue Montreal';
+    overscroll-behavior-y: none;
+    transition: background-color 2s ease;
+}
+@font-face {
+    font-family: 'Dharma-Ghotic';
+    src: url(fonts/DharmaGothicC-ExBold.ttf);
+  }
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url(fonts/NeueMontreal-Light.otf);
+  }
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url(fonts/Gilroy-Medium.ttf);
+  }
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url(fonts/Gilroy-Light.ttf);
+  }
+
+ul {
+    list-style: none;
+}
+
+
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.menu-div {
+    background-color: #F72F2F;
+    padding:15px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-div:hover {
+    color: rgb(243, 243, 243);
+    transition: all 0.2s ease-in-out;
+    transform: scale(120%);
+}
+
+/* Menu Stuff */
+
+.menu {
+    opacity: 0.3;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 50px;
+    position: fixed;
+    top: -100%;
+    align-items: center;
+    background-color: #F72F2F;
+}
+
+.nav {
+    opacity: 0;
+    margin-bottom: -20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: gray;
+    transition: all 0.2s ease-in-out;
+}
+
+.background {
+    position: absolute;
+    font-size: 15rem;
+    font-weight: 600;
+    color: #333;
+    user-select: none;
+    z-index: 1;
+}
+
+.small-number {
+    font-size: 1.2rem;
+}
+
+.exit {
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+.title {
+    font-size: 2rem;
+    color: rgb(212, 212, 212);
+}
+
+.right {
+    padding-right: 100px;
+}
+
+.information {
+    margin-bottom: 24px;
+    color:rgb(212, 212, 212)
+}
+
+.menu-container {
+    z-index: 3;
+}
+
+.social-medias > a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Media Query */
+@media screen and (max-width: 660px) {
+    .menu {
+        flex-direction: column;
+        justify-content: center;
+        top: -120%;
+    }
+
+    .right {
+        display: none;
+    }
+    #logo {
+        width: 75px!important;
+        height: 75px!important;
+    }
+    .hero {
+        font-size: 172px!important;
+    }
+    .heroText{
+        font-size: 13px!important;
+        width: 90%!important;
+        padding-bottom: 25px!important;
+    }
+}
+@media screen and (max-width: 376px) {
+    .hero{
+        font-size: 164px!important;
+    }
+}
+#logo {
+    width:125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+#image {
+    border-radius: 40%;
+    width:100%;
+    height: 100%;
+    user-select: none;
+}
+
+.hero {
+    font-family: 'Dharma-Ghotic';
+    color: #F72F2F;
+    font-size: 214px;
+}
+.heroText {
+    width: 75%;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.left-side{
+    position:fixed;
+    transform: rotate(-90deg);
+    top:50%;
+    left:-20px;
+    font-size: 14px;
+    color:rgb(46, 46, 46);
+}
+
+.progress-section{
+    position: fixed;
+    right: -25px;
+    top:45%;
+    width:60px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    will-change: transform;
+    transition: .3s ease-out;
+}
+.progress-bar-wrap{
+    position: relative;
+    width: 2px;
+    
+    border-radius: 10px;
+    overflow:hidden;
+    background-color: rgb(105, 105, 105);
+}
+.progress-bar{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height: 0%;
+    background-color: rgb(189,189,189);
+
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+
+.progress-num{
+    transform: rotate(-90deg);
+}
+
+.scrollable{
+    scroll-behavior: smooth;
+}
+
+.color-black {
+    background-color: #333;
+  }
+.color-white{
+    background-color: rgb(255, 247, 247);
+}
+.color-gray{
+    background-color: rgb(105, 105, 105);
+}

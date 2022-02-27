@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Twins Official | Vuk & Danilo Tatic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="scrollable">
+    <div class="left-side">
+    <p class="leftSide">DJ Twins © 2022.</p>
+    </div>
+    <div class="progress-section">
+        <div class="progress-bar-wrap">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="progress-num"></div>
+    </div>
+
+    <div class="home container px-6">
+        <div class="container-1"><div class="logo" href="index.html">
+            <img src="assets/logo.jpg" id="logo">
+        </div></div>
+        <div class="container-2"><div class="menu-div" href="#">Menu</div></div>
+    </div>
+
+    <!-- Menu Stuff -->
+    <div class="menu">
+        <div class="background">Info</div>
+        <div class="exit"><img src="./assets/exit.svg" alt="" srcset=""></div>
+        <div class="menu-container">
+            <ul class="options">
+                <li class="nav"><a href="#" class="nav-link">Home <span class="small-number">01</span></a></li>
+                <li class="nav"><a href="#" class="nav-link">Blog <span class="small-number">02</span></a></li>
+                <li class="nav"><a href="#" class="nav-link">About <span class="small-number">03</span></a></li>
+            </ul>
+        </div>
+        <div class="menu-container right">
+            <div class="information">
+                <p class="title">Where am I?</p>
+                <p class="description">123 my address</p>
+
+            </div>
+            <div class="information">
+                <p class="title">Contact</p>
+                <p class="description">andrewwoan@gmail.com</p>
+
+            </div>
+            <div class="information">
+                <p class="title">Follow me</p>
+                <div class="social-medias">
+                    <a href="" class="social-media">twitter</a>
+                    <a href="" class="social-media">youtube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ <!--hero section-->
+    <div class="panel container px-5 py-5 vh-100" data-color="white">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-0 lh-5 h-100 align-items-center justify-content-center">
+        <div class="col">
+            <h1 class="hero text-left">DJ Twins</h1>
+            <p class="heroText d-xs-none d-md-block">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, quibusdam alias saepe assumenda nam ullam quaerat, consectetur, enim explicabo maiores necessitatibus at perferendis velit tempora cupiditate! Doloribus, veritatis consequatur. Voluptatem!
+            </p>
+        </div>
+        <div class="col image">
+            <img src="" id="image">
+        </div>
+    </div>
+</div>
+
+    <div class="panel container px-5 py-5 vh-100" data-color="gray">
+        <h2>Armin</h2>
+    </div>
+    <div class="panel container px-5 py-5 vh-100" data-color="black">
+        
+    </div>
+    <div class="container px-5 py-5 vh-100">
+        
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    //scrollbar progress
+
+    let progressSection = document.querySelector('.progress-section')
+    let progressBar = document.querySelector('.progress-bar');
+    let progressNum = document.querySelector('.progress-num')
+
+    let x, y;
+
+    function updateProgressBar(){
+        progressBar.style.height = `${getScrollPercentage()}%`
+        progressNum.innerText = `${Math.ceil(getScrollPercentage())}%`
+        requestAnimationFrame(updateProgressBar)
+    }
+
+    function getScrollPercentage(){
+        return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 99)
+    }
+
+    updateProgressBar()
+
+
+    //change image in hero
+  let image = document.getElementById("image");
+  let images = ['1.png', '2.png']
+  setInterval(function(){
+    let random = Math.floor(Math.random() * 2);
+    image.src = images[random];
+  }, 800)
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="color.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>   
+</body>
+</html>
