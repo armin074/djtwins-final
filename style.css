@@ -132,15 +132,41 @@ ul {
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
-
+.music-section {
+    margin-top: 350px!important;
+}
+.music-section h1 {
+    font-family: 'Dharma-Ghotic';
+    font-size: 112px;
+}
 /* Media Query */
 @media screen and (max-width: 660px) {
+    .first-anime {
+        height: 75vh!important;
+    }
+    .showcase{
+        font-size: 64px!important;
+    }
+    .music-section h1 {
+        font-family: 'Dharma-Ghotic';
+        font-size: 92px!important;
+    }
     .menu {
         flex-direction: column;
         justify-content: center;
         top: -120%;
     }
-
+    #hands{
+        width: 250px!important;
+        margin-left: -25px!important;
+    }
+    .music-section {
+        margin-top: 0px!important;
+    }
+    #second-pic{
+        width: 300px!important;
+        margin-left: -155px!important;
+    }
     .right {
         display: none;
     }
@@ -156,18 +182,30 @@ ul {
         width: 90%!important;
         padding-bottom: 25px!important;
     }
+    #rotate {
+        width: 85px!important;;
+        position: absolute;
+        bottom: -250px!important;;
+        right: 50px!important;
+        
+    }
 }
 @media screen and (max-width: 376px) {
     .hero{
         font-size: 164px!important;
     }
+
 }
 #logo {
     width:125px;
     height: 125px;
     border-radius: 50%;
 }
-
+#second-pic{
+    width: 600px;
+    opacity: .65;
+    margin-left: -155px!important;
+}
 #image {
     border-radius: 40%;
     width:100%;
@@ -179,6 +217,7 @@ ul {
     font-family: 'Dharma-Ghotic';
     color: #F72F2F;
     font-size: 214px;
+    overflow: hidden;
 }
 .heroText {
     width: 75%;
@@ -227,18 +266,71 @@ body::-webkit-scrollbar{
 
 .progress-num{
     transform: rotate(-90deg);
+    z-index: 200!important;
 }
 
 .scrollable{
     scroll-behavior: smooth;
 }
 
-.color-black {
-    background-color: #333;
+.color-red {
+    background-color: #cec2c2;
   }
 .color-white{
-    background-color: rgb(255, 247, 247);
+    background-color: #f8f4f4;
 }
-.color-gray{
-    background-color: rgb(105, 105, 105);
+.color-reder{
+    background-color: #9e9d9d;
+}
+.noise::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: .06;  
+    z-index: 1000;
+    pointer-events: none;
+    background: url(assets/noise.gif) ;
+}
+#hands{
+    width: 450px;
+    padding-top: 100px;
+}
+
+#rotate {
+    width:125px;
+    position: absolute;
+    bottom:-300px;
+    right: 175px;
+    animation: rotate 16s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-360deg);
+      }
+}
+
+.showcase {
+    font-family: 'Dharma-Ghotic';
+    font-size: 172px;
+    position:absolute;
+    left: 25%;
+    
+    z-index: 65;
+    letter-spacing: 50px;
+}
+
+#dj {
+    color: #F72F2F;
+}
+
+.music-section h1 {
+    font-family: 'Dharma-Ghotic';
+    font-size: 172px;
 }
