@@ -20,13 +20,17 @@ body{
     src: url(fonts/NeueMontreal-Light.otf);
   }
 @font-face {
-    font-family: 'Gilroy-Medium';
-    src: url(fonts/Gilroy-Medium.ttf);
+    font-family: 'League-Spartan';
+    src: url(fonts/league-spartan/Le.ttf);
   }
 @font-face {
     font-family: 'Gilroy-Light';
     src: url(fonts/Gilroy-Light.ttf);
   }
+@font-face {
+    font-family: 'Gilroy-Heavy';
+    src: url(fonts/Gilroy-Heavy.ttf);
+}
 
 ul {
     list-style: none;
@@ -139,17 +143,43 @@ ul {
     font-family: 'Dharma-Ghotic';
     font-size: 112px;
 }
+.about {
+    font-family: 'Neue Montreal';
+    font-size: 48px;
+    color:#f8f4f4;
+    width: 90%;
+}
 /* Media Query */
 @media screen and (max-width: 660px) {
+    #first-row-1{
+        padding-top: 5px!important;
+        margin-left: -50px!important;
+    }
+    #first-row-2{
+        padding-top: 50px!important;
+        margin-left: -60px!important;
+    }
+    #first-row-3{
+        padding-top: 50px!important;
+        margin-left: -50px!important;
+    }
+    .about {
+        font-family: 'Neue Montreal';
+        font-size: 36px!important;
+        color:#f8f4f4;
+        width: 100%!important;
+    }
     .first-anime {
         height: 75vh!important;
     }
     .showcase{
         font-size: 64px!important;
+        width:40%;
     }
     .music-section h1 {
         font-family: 'Dharma-Ghotic';
         font-size: 92px!important;
+        margin-top:150px!important;
     }
     .menu {
         flex-direction: column;
@@ -305,6 +335,7 @@ body::-webkit-scrollbar{
     bottom:-300px;
     right: 175px;
     animation: rotate 16s linear infinite;
+    
 }
 
 @keyframes rotate {
@@ -333,4 +364,17 @@ body::-webkit-scrollbar{
 .music-section h1 {
     font-family: 'Dharma-Ghotic';
     font-size: 172px;
+}
+
+
+#first-row-1{
+    width: 250px;
+}
+#first-row-2{
+    width: 300px;
+    padding-right:25px
+
+}
+#first-row-3{
+    width: 250px;
 }

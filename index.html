@@ -88,7 +88,9 @@
             </div>
         </div>
         <div class="row py-5 px-5 align-items-end justify-content-end align-items-sm-start">
-            <!-- <h3 class="showcase"><span id="dj">DJ</span><br /> Twins Ⓒ</h3>-->
+           
+            <p class="showcase"><span id="dj">DJ</span><br /> Twins Ⓒ</p>
+            
             <div class="col-6"> 
                 <img id="second-pic" src="assets/pic.jpg">
             </div>
@@ -97,18 +99,31 @@
     <div class="music-section panel container px-5 py-5 vh-100" data-color="reder">
         <div class="row align-items-center justify-content-center">
         <div class="col text-white">
-            <h1></h1>
+            <h1>Open for all kinds of events</h1>
+
         </div>   
         <div class="row g-0 align-items-center justify-content-center px-3 py-5">
             <div class="col">
-
+                <p class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat deserunt adipisci consequatur. Tempora maxime ut consequatur, cupiditate voluptate nam quo culpa similique minima labore voluptatum tempore error quaerat facere ducimus sapiente deleniti delectus illo, ad neque sunt iure nostrum eligendi. Quas rerum ducimus maxime optio cupiditate modi, fugiat iusto sed ex esse aspernatur adipisci vero qui temporibus cum. Temporibus, magnam.</p>
             </div>
     </div>
-    <div class="panel container px-5 py-5 vh-100" data-color="red">
-        <h3>Another</h3>
+    <div class="panel gallery container px-5 py-5 vh-100" data-color="red">
+        <div class="row row-cols-1 row-cols-sm-3 px-5 py-5  align-items-center justify-content-center">
+            <img src="assets/rotate.png" id="rotate">
+            <div class="col">
+                <img src="/assets/a.jpg" id="first-row-1">
+            </div>
+            <div class="col">
+                <img src="/assets/c.jpg" id="first-row-2">
+               
+            </div>
+            <div class="col">
+                <img src="/assets/b.jpg" id="first-row-3">
+            </div>
+        </div>
     </div>
     <div class="panel container px-5 py-5 vh-100" data-color="white">
-        <h3>Another</h3>
+        <h3>Showcase</h3>
     </div>
 
 </div>
@@ -178,7 +193,10 @@
             start: "center bottom"
         }
     });
-    tl.from("#second-pic", {x: 200, scale: 0, duration: 2.2})
+    tl.from("#second-pic", {x: 200, scale: 0, stagger: .2, duration: 2.2});
+    tl.from(".first-anime p", {x: -200, scale: 0.2, stagger: .2, duration: 2.2},"-=.5");
+    //
+
     let tll = gsap.timeline({
         scrollTrigger: {
             trigger: '.music-section',
@@ -186,8 +204,17 @@
         }
     });
     tll.from(".music-section h1", {x: -200, opacity: 0, duration: 1.5})
+    tll.from(".music-section p",{y: 150, skewY: 10,duration: 2,stagger: 0.5},"-=.5")
     
-    
+    //
+  
+    let tl1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.gallery',
+            start: "center bottom"
+        }
+    });
+    tl1.from(".gallery img",{y: 150, skewY: -10,duration: 2,stagger: .7},)
 </script>  
 </body>
 </html>
